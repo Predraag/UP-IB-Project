@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Korisnik {
+public class Korisnik {
 	
 	private String korisnickoIme;
 	private String lozinka;
