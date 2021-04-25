@@ -1,17 +1,47 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
 public class Korisnik {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	
+	@Column(unique = true, nullable = false)
 	private String korisnickoIme;
+	
+	@Column(nullable = false)
 	private String lozinka;
+	
+	@Column
 	private String ime;
+	
+	@Column
 	private String prezime;
+	
+	@Column(unique = true, nullable = false)
 	private String JMBG;
+	
+	@Enumerated(EnumType.STRING)
 	private Pol pol;
+	
+	@Column
 	private String adresa;
+	
+	@Column
 	private String brojTelefona;
+	
+	@Column(unique = true, nullable = false)
 	private String email;
+	
+	@Enumerated(EnumType.STRING)
 	private Uloga uloga;
+	
+	public Korisnik(){
+		
+	}
 	
 	public Korisnik(String korisnickoIme, String lozinka, String ime, String prezime, String JMBG, Pol pol, String adresa, String brojTelefona, 
 			String email, Uloga uloga){
@@ -26,7 +56,18 @@ public class Korisnik {
 		this.brojTelefona = brojTelefona;
 		this.uloga = uloga;
 	}
-
+	
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
+	
 	public String getKorisnickoIme() {
 		return korisnickoIme;
 	}
@@ -109,11 +150,10 @@ public class Korisnik {
 
 	@Override
 	public String toString() {
-		return "Korisnik [korisnickoIme=" + korisnickoIme + ", lozinka=" + lozinka + ", ime=" + ime + ", prezime="
-				+ prezime + ", JMBG=" + JMBG + ", pol=" + pol + ", adresa=" + adresa + ", brojTelefona=" + brojTelefona
-				+ ", email=" + email + ", uloga=" + uloga + "]";
+		return "Korisnik [id=" + id + ", korisnickoIme=" + korisnickoIme + ", lozinka=" + lozinka + ", ime=" + ime
+				+ ", prezime=" + prezime + ", JMBG=" + JMBG + ", pol=" + pol + ", adresa=" + adresa + ", brojTelefona="
+				+ brojTelefona + ", email=" + email + ", uloga=" + uloga + "]";
 	}
-	
 	
 	
 }

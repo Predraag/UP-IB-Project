@@ -1,17 +1,18 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Klinika {
 	
 	private String naziv;
 	private String adresa;
 	private String opis;
-	private Termin slobodniTermin;
-	private String spisakLekara;
+	private Pregled slobodniTermin;
+	private List<Korisnik> spisakLekara;
 	private Cenovnik cenovnik;
 	
-	public Klinika (String naziv, String adresa, String opis, Termin slobodniTermin, String spisakLekara, Cenovnik cenovnik) {
+	public Klinika (String naziv, String adresa, String opis, Pregled slobodniTermin, List<Korisnik> spisakLekara, Cenovnik cenovnik) {
 		super();
 		this.naziv = naziv;
 		this.adresa = adresa;
@@ -45,19 +46,19 @@ public class Klinika {
 		this.opis = opis;
 	}
 
-	public Termin getSlobodniTermin() {
+	public Pregled getSlobodniTermin() {
 		return slobodniTermin;
 	}
 
-	public void setSlobodniTermin(Termin slobodniTermin) {
+	public void setSlobodniTermin(Pregled slobodniTermin) {
 		this.slobodniTermin = slobodniTermin;
 	}
 
-	public String getSpisakLekara() {
+	public List<Korisnik> getSpisakLekara() {
 		return spisakLekara;
 	}
 
-	public void setSpisakLekara(String spisakLekara) {
+	public void setSpisakLekara(List<Korisnik> spisakLekara) {
 		this.spisakLekara = spisakLekara;
 	}
 

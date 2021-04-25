@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class Termin {
+public class Pregled {
 	
 	private Date datumVremePregleda;
 	private int trajanjePregleda;
@@ -10,7 +10,7 @@ public class Termin {
 	private String medicinskaSestra;
 	private Double cena;
 	
-	public Termin(Date datumVremePregleda, int trajanjePregleda, String lekar, String medicinskaSestra,
+	public Pregled(Date datumVremePregleda, int trajanjePregleda, String lekar, String medicinskaSestra,
 			Double cena) {
 		super();
 		this.datumVremePregleda = datumVremePregleda;
